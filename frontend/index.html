@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <link 
+  rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
+  integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
+  crossorigin="anonymous" 
+  referrerpolicy="no-referrer" 
+/>
+
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+    <p>Track your expenses</p>
+
+    
+    <input  type="text" id="searchInput"  placeholder=" Search expenses" >
+    
+
+    <button id="addBtn"><i class="fa-solid fa-cart-plus"></i> Add Expense</button>
+
+    
+    <div id="formContainer" class="hidden">
+      <input type="date" id="dateInput">
+      <input type="text" id="descInput" placeholder="Description">
+      
+      
+      <select id="catInput">
+        <option value="">Select Category</option>
+        <option value="Food"> Food</option>
+        <option value="Transport"> Transport</option>
+        <option value="Shopping"> Shopping</option>
+        <option value="Bills">Bills</option>
+        <option value="Health"> Health</option>
+        <option value="Other"> Other</option>
+      </select>
+
+      <input type="number" id="amountInput" placeholder="Amount">
+      <button id="saveBtn"><i class="fa-solid fa-download"></i>Save Expense</button>
+      <button id="cancelBtn"><i class="fa-solid fa-xmark"></i>Cancel</button>
+    </div>
+
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Category</th>
+          <th>Amount</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="expenseTable"></tbody>
+    </table>
+
+    <h2><i class="fa-solid fa-globe"></i>Total Expenses: $<span id="totalAmount">0.00</span></h2>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
